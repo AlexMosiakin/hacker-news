@@ -1,0 +1,7 @@
+.newList{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1600px;
+    margin: 0px auto;
+}

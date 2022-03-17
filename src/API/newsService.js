@@ -22,4 +22,13 @@ export default class newsService {
             console.log(e);
         }
     }
+
+    static async getComment(id){
+        try {
+            const response = await axios.get(`https://hacker-news.firebaseio.com/v0/item/${id}.json`)   
+            return response.data
+        } catch (e) {
+            console.log(e)
+        }
+    }
 }

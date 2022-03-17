@@ -1,4 +1,38 @@
 .newListItem{
-    border: 1px solid green;
+    padding: 20px;
+    background: rgb(255, 255, 255);
+    border-radius: 8px;
+    color: rgb(0, 0, 0);
+    height: 100%;
     cursor: pointer;
+    transition: 0.5s;
 }
+
+.newListItemLoad{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newListItem:hover{
+    -webkit-transform: scale(1.025);
+    transform: scale(1.025);
+}
+
+.newRow{
+    margin: 0px 0px 20px;
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    font-size: 24px;
+}
+
+.newRow:last-child{
+    margin: 0;
+}
+
+.newTitle{
+    font-weight: 700;
+    color: rgb(255, 102, 0);
+}
+

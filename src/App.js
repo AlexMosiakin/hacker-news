@@ -1,26 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import newsService from './API/newsService';
-import NewList from './components/NewList/NewList';
-import { useFetch } from './hooks/useFetch';
-
+import {BrowserRouter, Route, Routes, Navigate} from 'react-router-dom'
+import { applyMiddleware } from 'redux';
+import Navbar from './components/Navbar/Navbar';
+import NewItem from './pages/NewItem/NewItem';
+import News from './pages/News/News';
+import './styles/App.css';
 function App() {
-  const [news, setNews] = useState([]);
-  const [limitToFirst] = useState(100);
-
-  const [fetchNews, isNewsLoading, newsError] = useFetch(async (limitToFirst) => {
-    const response = await newsService.getAll(limitToFirst);
-    setNews(response)
-})
-
-  useEffect(() => {
-    fetchNews(limitToFirst);
-  },[]);
 
   return (
-    <div className="App">
-        <h1>Hacker news</h1>
-        <NewList isNewsLoading={isNewsLoading} news={news}/>
-    </div>
+    <BrowserRouter>
+      <Navbar/>
+      <Routes>
+        <Route exact path='/news' element={<News />}/>
+        <Route exact path='/news/:id' element={<NewItem />}/>
+        <Route path="*" element={<Navigate to="/news" />}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

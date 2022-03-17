@@ -1,0 +1,43 @@
+.navbarWrapper{
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    max-width: 1600px;
+    margin: 0px auto;
+}
+
+.navbarBtn{
+    background: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:64px;
+    height:64px;
+    margin-left: auto;
+    transition: 0.5s;
+}
+
+.navbarBtn img{
+    max-width:32px;
+}
+
+.navbarHeader{
+    font-size: 64px;
+    text-align: center;
+    margin: 40px 0px;
+}
+
+.navbarBtnWrapper{
+    display: flex;
+    align-items: center;
+}
+
+.navbarBtnWrapper .navbarBtn:last-child{
+    margin-left: 20px;
+}

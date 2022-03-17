@@ -1,0 +1,34 @@
+.newItemWrapper{
+    padding: 20px;
+    background: rgb(255, 255, 255);
+    border-radius: 8px;
+    color: rgb(0, 0, 0);
+    max-width: 1600px;
+    margin: 0px auto;
+}
+
+.newItemTitle{
+    font-weight: 700;
+    color: rgb(255, 102, 0);
+    font-size: 32px;
+    margin-top: 0px;
+    margin: 0px 0px 20px;
+}
+
+.newItemRow{
+    margin: 0px 0px 20px;
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    font-size: 24px;
+}
+
+.newItemRow:last-child{
+    margin: 0;
+}
+
+.newItemContainerLoad{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
