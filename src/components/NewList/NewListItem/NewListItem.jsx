@@ -26,7 +26,7 @@ function NewListItem({id}) {
   
     const getId = (ClickedId) => {
         dispatch({type:"GET_ID", payload: ClickedId});
-        router(`/news/${ClickedId}`)
+        router(`/hacker-news/news/${ClickedId}`)
     }
 
     return (
