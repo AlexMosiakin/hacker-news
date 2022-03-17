@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/hacker-news/news/static/css/main.f4e8a162.css",
-    "main.js": "/hacker-news/news/static/js/main.e1486b58.js",
+    "main.js": "/hacker-news/news/static/js/main.74e355f1.js",
     "static/media/comment.svg": "/hacker-news/news/static/media/comment.dd7f7e90c745f3a7682c7d4d294b3cbb.svg",
     "static/media/reload.svg": "/hacker-news/news/static/media/reload.eb18d95f027c72fd477d17073facdf91.svg",
     "static/media/link.svg": "/hacker-news/news/static/media/link.baaa80433a138aae7c91b803f65c3e24.svg",
@@ -11,10 +11,10 @@
     "static/media/back.svg": "/hacker-news/news/static/media/back.88938ea5652b87c545bf9be6a6a700a7.svg",
     "static/media/star.svg": "/hacker-news/news/static/media/star.2ee569fbf4cb9958d8fa3bda14be49d8.svg",
     "main.f4e8a162.css.map": "/hacker-news/news/static/css/main.f4e8a162.css.map",
-    "main.e1486b58.js.map": "/hacker-news/news/static/js/main.e1486b58.js.map"
+    "main.74e355f1.js.map": "/hacker-news/news/static/js/main.74e355f1.js.map"
   },
   "entrypoints": [
     "static/css/main.f4e8a162.css",
-    "static/js/main.e1486b58.js"
+    "static/js/main.74e355f1.js"
   ]
 }
