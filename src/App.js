@@ -11,9 +11,9 @@ function App() {
     <BrowserRouter>
       <Navbar/>
       <Routes>
-        <Route exact path='/hacker-news/news' element={<News />}/>
-        <Route exact path='/hacker-news/news/:id' element={<NewItem />}/>
-        <Route path="*" element={<Navigate to="/hacker-news/news" />}/>
+        <Route exact path='/hacker-news' element={<News />}/>
+        <Route exact path='/hacker-news/:id' element={<NewItem />}/>
+        <Route path="*" element={<Navigate to="/hacker-news" />}/>
       </Routes>
     </BrowserRouter>
   );

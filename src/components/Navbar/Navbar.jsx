@@ -11,7 +11,7 @@ function Navbar() {
                 <button className={classes.navbarBtn}>
                     <img src={reload} alt={reload} />
                 </button>
-                <Link to={"/hacker-news/news"} className={classes.navbarBtn}>
+                <Link to={"/hacker-news"} className={classes.navbarBtn}>
                     <img src={back} alt={back} />
                 </Link>
             </div>
