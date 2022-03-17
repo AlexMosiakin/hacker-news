@@ -5,6 +5,11 @@ import Loader from '../../components/Loader/Loader';
 import NewCommentList from '../../components/NewCommentList/NewCommentList';
 import { useFetch } from '../../hooks/useFetch';
 import classes from './NewItem.module.css';
+import timeService from '../../API/timeService';
+import starIcon from '../../img/star.svg';
+import timeIcon from '../../img/time.svg';
+import linkIcon from '../../img/link.svg';
+import commentIcon from '../../img/comment.svg';
 
 function NewItem() {
     const params = useParams()
@@ -22,27 +27,29 @@ function NewItem() {
     },[])
     
     return (
-        <div className={classes.newItemWrapper}>
-            {newIsLoading ? 
-            <div className={classes.newItemContainerLoad}>
-            <Loader/>
-            </div>
-            :
-            <div>
-                <div className={classes.newItemContainer}>
-                    <p className={classes.newItemTitle}>{newItem.title}</p>
-                    <p className={classes.newItemRow}>link: {newItem.url}</p>
-                    <p className={classes.newItemRow}>time: {newItem.time}</p>
-                    <p className={classes.newItemRow}>score: {newItem.score}</p>
-                    <p className={classes.newItemRow}>comments: {comments ? comments.length : 0}</p>
+        <div className={classes.newItemBody}>
+                {newIsLoading ? 
+                <div className={classes.newItemWrapper}>
+                    <div className={classes.newItemContainerLoad}>
+                        <Loader/>
+                    </div>
                 </div>
-                <div className={classes.newItemComments}>
-                    {comments ? <NewCommentList newIsLoading={newIsLoading} comments={comments}/> : ""}
+                :
+                <div>
+                    <div className={classes.newItemWrapper}>
+                        <p className={classes.newItemTitle}>{newItem.title}</p>
+                        <p className={classes.newItemRow}><img className={classes.newItemIcon} src={linkIcon} alt={linkIcon} />{newItem.url}</p>
+                        <p className={classes.newItemRow}><img className={classes.newItemIcon} src={timeIcon} alt={timeIcon} />{timeService.getTime(newItem.time)}</p>
+                        <p className={classes.newItemRow}><img className={classes.newItemIcon} src={starIcon} alt={starIcon} />{newItem.score}</p>
+                        <p className={classes.newItemRow}><img className={classes.newItemIcon} src={commentIcon} alt={commentIcon} />{comments ? comments.length : 0}</p>
+                    </div>
+                    <div className={classes.newItemComments}>
+                        {comments ? <NewCommentList newIsLoading={newIsLoading} comments={comments}/> : ""}
+                    </div>
                 </div>
                 
+                }
             </div>
-            }
-        </div>
     );
     }
 

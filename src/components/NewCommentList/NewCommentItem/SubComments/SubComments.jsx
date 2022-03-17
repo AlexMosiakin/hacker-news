@@ -1,24 +1,22 @@
-import React, { useEffect, useState } from "react";
-import newsService from "../../../API/newsService";
-import { useFetch } from "../../../hooks/useFetch";
-import classes from './NewCommentItem.module.css';
-import manIcon from '../../../img/man.svg'
-import SubComments from './SubComments/SubComments'
+import React, {useState, useEffect} from "react";
+import { useFetch } from "../../../../hooks/useFetch";
+import newsService from "../../../../API/newsService";
+import classes from './SubComments.module.css'
+import manIcon from '../../../../img/man.svg'
 
-function NewCommentItem(props){
-    const currentId = props.id;
+function SubComments(props) {
+    const currentId = props.subComment;
     const [comment, setComment] = useState(0);
-    const [subComments, setSubComments] = useState([]);
+
     const [commentFetch, isCommentLoading, commentError] = useFetch(async (currentId) => {
         const response = await newsService.getComment(currentId);
         setComment(response);
-        setSubComments([...subComments, ...response.kids]);
     })
 
     useEffect(() => {
         commentFetch(currentId);
     },[])
-
+    
     return(
         comment.by && comment.text ? 
         <div>
@@ -26,14 +24,10 @@ function NewCommentItem(props){
             <div className={classes.commentRow}>
                 <div dangerouslySetInnerHTML={{__html: comment.text}}></div>
             </div>
-            {subComments.map(subComment => {
-                <SubComments subComment={subComment}/>
-            })
-            }
         </div>
         :
         ""
     )
 }
 
-export default NewCommentItem;
+export default SubComments

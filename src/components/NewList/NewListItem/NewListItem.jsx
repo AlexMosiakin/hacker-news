@@ -5,6 +5,10 @@ import { useFetch } from '../../../hooks/useFetch';
 import { useDispatch } from 'react-redux'
 import { useNavigate  } from 'react-router-dom'
 import Loader from '../../Loader/Loader';
+import timeService from '../../../API/timeService';
+import manIcon from '../../../img/man.svg';
+import starIcon from '../../../img/star.svg';
+import timeIcon from '../../../img/time.svg';
 
 function NewListItem({id}) {
     const [newItem, setNewItem] = useState([]);
@@ -34,9 +38,9 @@ function NewListItem({id}) {
             :
             <div className={classes.newListItem}>
                 <p className={classes.newRow + " " + classes.newTitle}>{newItem.title}</p>
-                <p className={classes.newRow}>by: {newItem.by}</p>
-                <p className={classes.newRow}>score: {newItem.score}</p>
-                <p className={classes.newRow}>time: {newItem.time}</p>
+                <p className={classes.newRow}><img className={classes.newIcon} src={manIcon} alt={manIcon} />{newItem.by}</p>
+                <p className={classes.newRow}><img className={classes.newIcon} src={starIcon} alt={starIcon} />{newItem.score}</p>
+                <p className={classes.newRow}><img className={classes.newIcon} src={timeIcon} alt={timeIcon} />{timeService.getTime(newItem.time)}</p>
             </div>
             }
         </div>
