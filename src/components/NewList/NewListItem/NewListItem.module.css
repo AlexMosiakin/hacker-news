@@ -40,3 +40,10 @@
     max-width: 30px;
     margin-right: 10px;
 }
+
+@media screen and (max-width:650px) {
+    .newRow{
+        margin: 0px 0px 15px;
+        font-size: 18px;
+    }
+}

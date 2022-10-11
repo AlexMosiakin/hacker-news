@@ -12,8 +12,8 @@ function NewList({isNewsLoading, news}) {
             isNewsLoading ? 
             <Loader/>
             :
-            news.map( newItem => 
-              <NewListItem key={newItem} id={newItem}/>
+            news.map( (newItem, index) => 
+              <NewListItem key={index} id={newItem}/>
             )
           }
       </div>

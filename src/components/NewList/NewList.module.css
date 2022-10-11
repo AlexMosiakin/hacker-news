@@ -4,4 +4,31 @@
     gap: 40px;
     max-width: 1600px;
     margin: 0px auto;
+    margin-bottom: 40px;
+    min-height: 100vh;
+}
+
+@media screen and (max-width:1650px) {
+    .newList{
+        max-width: 1300px;
+    }
+}
+
+@media screen and (max-width:1350px) {
+    .newList{
+        max-width: 1000px;
+    }
+}
+
+@media screen and (max-width:1050px) {
+    .newList{
+        max-width: 80%;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .newList{
+        max-width: 90%;
+    }
 }

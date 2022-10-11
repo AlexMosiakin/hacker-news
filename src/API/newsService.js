@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default class newsService {
-    static async getAll(limitToFirst = 100){
+    static async getAll(limitToFirst = 10){
         try {
             const response = await axios.get('https://hacker-news.firebaseio.com/v0/newstories.json?orderBy="$key"',{
                 params:{

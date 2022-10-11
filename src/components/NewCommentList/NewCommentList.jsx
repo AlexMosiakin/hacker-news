@@ -9,7 +9,7 @@ function NewCommentList({newIsLoading, comments}){
             newIsLoading ? 
             <h5>Loading...</h5>
             :
-            comments.map( newItem => 
+            comments && comments.map( newItem => 
               <NewCommentItem key={newItem} id={newItem}/>
             )
           }

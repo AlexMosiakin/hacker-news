@@ -41,3 +41,51 @@
 .navbarBtnWrapper .navbarBtn:last-child{
     margin-left: 20px;
 }
+
+@media screen and (max-width:1650px) {
+    .navbarWrapper{
+        max-width: 1300px;
+    }
+}
+
+@media screen and (max-width:1350px) {
+    .navbarWrapper{
+        max-width: 1000px;
+    }
+}
+
+@media screen and (max-width:1050px) {
+    .navbarWrapper{
+        max-width: 80%;
+    }
+    .navbarHeader{
+        font-size: 48px;
+    }
+    .navbarBtn{
+        width:48px;
+        height:48px;
+    }
+    .navbarBtn img{
+        max-width:24px;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .navbarBtn:first-child{
+        display: none;
+    }
+    .navbarWrapper{
+        max-width: 90%;
+    }
+    .navbarHeader{
+        font-size: 32px;
+        margin: 25px 0;
+    }
+    .navbarBtn{
+        width:32px;
+        height:32px;
+    }
+    .navbarBtn img{
+        max-width:50%;
+    }
+}

@@ -35,17 +35,18 @@ function NewItem() {
                     </div>
                 </div>
                 :
-                <div>
+                newItem && <div>
                     <div className={classes.newItemWrapper}>
                         <p className={classes.newItemTitle}>{newItem.title}</p>
-                        <p className={classes.newItemRow}><img className={classes.newItemIcon} src={linkIcon} alt={linkIcon} />{newItem.url}</p>
+                        <a href={newItem.url} target='_blank' className={classes.newItemRow}><img className={classes.newItemIcon} src={linkIcon} alt={linkIcon} />link on article</a>
                         <p className={classes.newItemRow}><img className={classes.newItemIcon} src={timeIcon} alt={timeIcon} />{timeService.getTime(newItem.time)}</p>
                         <p className={classes.newItemRow}><img className={classes.newItemIcon} src={starIcon} alt={starIcon} />{newItem.score}</p>
                         <p className={classes.newItemRow}><img className={classes.newItemIcon} src={commentIcon} alt={commentIcon} />{comments ? comments.length : 0}</p>
                     </div>
-                    <div className={classes.newItemComments}>
-                        {comments ? <NewCommentList newIsLoading={newIsLoading} comments={comments}/> : ""}
+                    {comments && <div className={classes.newItemComments}>
+                        <NewCommentList newIsLoading={newIsLoading} comments={comments}/>
                     </div>
+                    }
                 </div>
                 
                 }

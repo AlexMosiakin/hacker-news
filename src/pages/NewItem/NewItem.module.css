@@ -1,12 +1,15 @@
 .newItemBody{
     max-width: 1600px;
     margin: 0px auto;
+    margin-bottom: 40px;
 }
 .newItemWrapper{
     padding: 20px;
     background: rgb(255, 255, 255);
     border-radius: 8px;
     color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
 }
 
 .newItemTitle{
@@ -23,6 +26,7 @@
     align-items: center;
     display: flex;
     font-size: 24px;
+    text-decoration: none;
 }
 
 .newItemRow:last-child{
@@ -46,4 +50,35 @@
     background: rgb(255, 255, 255);
     border-radius: 8px;
     color: rgb(0, 0, 0);
+}
+
+@media screen and (max-width:1650px) {
+    .newItemBody{
+        max-width: 1300px;
+    }
+}
+
+@media screen and (max-width:1350px) {
+    .newItemBody{
+        max-width: 1000px;
+    }
+}
+
+@media screen and (max-width:1050px) {
+    .newItemBody{
+        max-width: 80%;
+    }
+    .newItemTitle{
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .newItemBody{
+        max-width: 90%;
+    }
+    .newItemRow{
+        margin: 0px 0px 15px;
+        font-size: 18px;
+    }
 }
