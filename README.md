@@ -1,31 +1,25 @@
-# News list app using "Hacker News API"
-# Установка
+# Hacker News Clone
 
-Для запуска на ПК должны быть установлены:
-[Node.js](https://nodejs.org/);
-[Yarn](https://yarnpkg.com/);
-[Git](https://git-scm.com/);
+A React-based web application that replicates the functionality of Hacker News, allowing users to browse and read the latest technology news articles fetched from the Hacker News API.
 
-Склонируйте репозиторий
+**Live Demo:** [Hacker News Clone](https://alexmosiakin.github.io/hacker-news/)
 
-```sh
-git clone https://github.com/AlexMosiakin/hacker-news.git
-```
+## ✨ Features
 
-### Настройка фронтенд части
+- **Latest News:** Displays a list of the most recent news articles from Hacker News.
+- **Article Details:** Click on any article to view its details, including the title, author, and a link to the full story.
+- **Responsive Design:** Optimized for various devices, ensuring a seamless experience on desktops, tablets, and mobile phones.
 
-Из корня проекта сделайте установку необходимых зависимостей
+## 🛠️ Technologies Used
 
-```sh
-yarn install
-```
+- **Frontend:**
+  - [React](https://reactjs.org/) – A JavaScript library for building user interfaces.
+  - [JavaScript (ES6+)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Programming language of the web.
+  - [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS) – Styling the application.
+  - [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML) – Markup language for structuring web content.
+- **API:**
+  - [Hacker News API](https://github.com/HackerNews/API) – Provides access to Hacker News data.
 
-Убедитесь, что в редакторе (если у вас VS Code) установлены:
-[Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode);
-[ESlint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+## 📝 License
 
-Запустите проект
-
-```sh
-yarn start
-```
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
